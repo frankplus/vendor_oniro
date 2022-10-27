@@ -1,39 +1,29 @@
-# vendor_iscas
+# vendor_rpi3
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+## 介绍
 
-#### 软件架构
-软件架构说明
+该仓库托管ISCAS移植的产品：树莓派系列产品，主要是树莓派3B(Raspberry Pi 3 Model B)
 
+## 目录
 
-#### 安装教程
+```
+vendor/rpi3
+├── README.md
+└── rpi3                  # 树莓派3B开发板           
+    ├── config.json       # 产品模块详细配置目录
+    ├── hals              # hal层相关配置目录
+    ├── hdf_config        # hdf相关hcs目录
+    ├── power_config      # 电源配置目录
+    └── product.gni
+   
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 贡献
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+[如何参与](https://gitee.com/openharmony/docs/blob/HEAD/zh-cn/contribute/%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE.md)
 
 
-#### 特技
+## 相关仓
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+* [device/board/iscas](https://gitee.com/openharmony-sig/device_board_iscas)
+* [device/soc/broadcom](https://gitee.com/openharmony-sig/device_soc_broadcom)
