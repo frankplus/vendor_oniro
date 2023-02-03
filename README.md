@@ -26,7 +26,6 @@ vendor/rpi
    ├── security_config
    ├── updater_config
    └── product.gni
-└── rpi4_small            # 树莓派4B开发板小型系统
 
 ```
 
