@@ -1,0 +1,14 @@
+{
+  "parts": {
+    "product_rpi4": {
+      "module_list": [
+        "//vendor/raspberrypi/rpi4/default_app_config:default_app_config",
+        "//vendor/raspberrypi/rpi4/image_conf:custom_image_conf",
+        "//vendor/raspberrypi/rpi4/preinstall-config:preinstall-config",
+        "//vendor/raspberrypi/rpi4/resourceschedule:resourceschedule",
+        "//vendor/raspberrypi/rpi4/etc:product_etc_conf"
+      ]
+    }
+  },
+  "subsystem": "product_raspberrypi"
+}
