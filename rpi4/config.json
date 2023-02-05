@@ -1,7 +1,7 @@
 {
   "product_name": "rpi4",
-  "device_company": "raspberrypi",
-  "device_build_path": "device/board/raspberrypi/rpi4",
+  "device_company": "iscas",
+  "device_build_path": "device/board/iscas/rpi4",
   "target_cpu": "arm",
   "type": "standard",
   "version": "3.0",

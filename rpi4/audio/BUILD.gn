@@ -15,7 +15,7 @@ import("//build/ohos.gni")
 
 ohos_prebuilt_etc("audio_policy_config") {
   source =
-      "//vendor/raspberrypi/rpi4/audio/audio_policy_config.xml"
+      "//vendor/${product_company}/rpi4/audio/audio_policy_config.xml"
   subsystem_name = "hdf"
   relative_install_dir = "audio"
   install_images = [ chipset_base_dir ]
