@@ -13,14 +13,6 @@
   "inherit": [ "productdefine/common/inherit/rich.json", "productdefine/common/inherit/chipset_common.json" ],
   "subsystems": [
     {
-      "subsystem": "raspberrypi_products",
-      "components": [
-        {
-          "component": "raspberrypi_products"
-        }
-      ]
-    },
-    {
       "subsystem": "security",
       "components": [
         {
@@ -47,6 +39,14 @@
             "graphic_standard_feature_ace_enable_gpu = true",
             "graphic_standard_feature_rs_enable_eglimage = true"
           ]
+        }
+      ]
+    },
+    {
+      "subsystem": "raspberrypi_products",
+      "components": [
+        {
+          "component": "raspberrypi_products"
         }
       ]
     },
