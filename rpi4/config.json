@@ -63,18 +63,6 @@
       ]
     },
     {
-      "subsystem": "startup",
-      "components": [
-        {
-          "component": "init",
-          "features": [
-            "enable_ohos_startup_init_feature_ab_partition = false",
-            "enable_ohos_startup_init_feature_loader = false"
-          ]
-        }
-      ]
-    },
-    {
       "subsystem": "wpa_supplicant-2.9",
       "components": [
         {
@@ -95,7 +83,26 @@
         {
           "component": "drivers_peripheral_audio",
           "features": [
+            "drivers_peripheral_audio_full_test_suite = true",
             "drivers_peripheral_audio_alsa_lib = false"
+          ]
+        }
+      ]
+    },
+    {
+      "component": "drivers_peripheral_codec",
+      "features": [
+        "drivers_peripheral_codec_support_omx = false"
+      ]
+    },
+    {
+      "subsystem": "startup",
+      "components": [
+        {
+          "component": "init",
+          "features": [
+            "enable_ohos_startup_init_feature_ab_partition = false",
+            "enable_ohos_startup_init_feature_loader = false"
           ]
         }
       ]
