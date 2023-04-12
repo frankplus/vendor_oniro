@@ -27,6 +27,12 @@
         {
           "component": "netmanager_ext",
           "features": []
+        },
+        {
+          "component": "wifi",
+          "features": [
+            "wifi_feature_with_p2p = false"
+          ]
         }
       ]
     },
