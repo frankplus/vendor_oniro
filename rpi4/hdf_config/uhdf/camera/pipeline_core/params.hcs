@@ -8,7 +8,7 @@
         id = 0;
         name = "";
     }
-    privew :: stream_info {
+    priview :: stream_info {
         id = 0;
         name = "preview";
     }
@@ -23,5 +23,9 @@
     normal :: scene_info {
         id = 0;
         name = "normal";
+    }
+    dual :: scene_info {
+        id = 1;
+        name = "dual";
     }
 }

@@ -8,6 +8,7 @@
   "board": "rpi4",
   "api_version": 8,
   "enable_ramdisk": false,
+  "enable_absystem": false,
   "build_selinux": false,
   "build_seccomp": false,
   "inherit": [ "productdefine/common/inherit/rich.json", "productdefine/common/inherit/chipset_common.json" ],
@@ -27,12 +28,6 @@
         {
           "component": "netmanager_ext",
           "features": []
-        },
-        {
-          "component": "wifi",
-          "features": [
-            "wifi_feature_with_p2p = false"
-          ]
         }
       ]
     },
@@ -43,7 +38,7 @@
           "component": "graphic_standard",
           "features": [
             "graphic_standard_feature_ace_enable_gpu = true",
-            "graphic_standard_feature_rs_enable_eglimage = true"
+            "graphic_standard_feature_rs_enable_eglimage = false"
           ]
         }
       ]
@@ -65,6 +60,10 @@
             "ace_engine_feature_enable_accessibility = true",
             "ace_engine_feature_enable_web = true"
           ]
+        },
+        {
+          "component": "ui_appearance",
+          "features": []
         }
       ]
     },
@@ -89,16 +88,30 @@
         {
           "component": "drivers_peripheral_audio",
           "features": [
-            "drivers_peripheral_audio_full_test_suite = true",
-            "drivers_peripheral_audio_alsa_lib = false"
+            "drivers_peripheral_audio_feature_hal_notsupport_pathselect = true",
+            "drivers_peripheral_audio_feature_full_test_suite = true",
+            "drivers_peripheral_audio_feature_alsa_lib = false"
+          ]
+        },
+        {
+          "component": "drivers_peripheral_display",
+          "features": [
+            "drivers_peripheral_display_community = true"
+          ]
+        },
+        {
+          "component": "drivers_peripheral_wlan",
+          "features": [
+            "drivers_peripheral_wlan_feature_enable_HDF_NL80211 = true",
+            "drivers_peripheral_wlan_feature_enable_HDF_UT = false"
+          ]
+        },
+        {
+          "component": "hdf_core",
+          "features": [
+            "hdf_core_platform_test_support = true"
           ]
         }
-      ]
-    },
-    {
-      "component": "drivers_peripheral_codec",
-      "features": [
-        "drivers_peripheral_codec_support_omx = false"
       ]
     },
     {
@@ -109,6 +122,72 @@
           "features": [
             "enable_ohos_startup_init_feature_ab_partition = false",
             "enable_ohos_startup_init_feature_loader = false"
+          ]
+        }
+      ]
+    },
+    {
+    "subsystem": "ai",
+    "components": [
+        {
+          "component": "mindspore",
+          "features": []
+        }
+      ]
+    },
+    {
+      "subsystem": "window",
+      "components": [
+        {
+          "component": "window_manager",
+          "features": [
+            "window_manager_dayu210_resource_config = true"
+         ]
+        }
+      ]
+    },
+    {
+      "subsystem": "multimedia",
+      "components": [
+        {
+          "component": "multimedia_player_framework",
+          "features": [
+            "multimedia_player_framework_use_codec_plugins = false"
+         ]
+        }
+      ]
+    },
+    {
+      "subsystem": "msdp",
+      "components": [
+        {
+          "component": "device_status",
+          "features": [
+            "fusion_interaction_coordination = false"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "communication",
+      "components": [
+        {
+          "component": "wifi",
+          "features": [
+            "wifi_feature_non_seperate_p2p = true",
+            "wifi_feature_non_hdf_driver = true"
+         ]
+        }
+      ]
+    },
+    {
+      "subsystem": "multimedia",
+      "components": [
+        {
+          "component": "audio_framework",
+          "features": [
+            "audio_framework_feature_dtmf_tone = true",
+            "audio_framework_feature_opensl_es = true"
           ]
         }
       ]

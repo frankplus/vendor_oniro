@@ -7,9 +7,9 @@ root {
                 id = 0;
             }
 
-            device_0x12050000 :: watchdog_device {
+            device_0xffd0f0d0 :: watchdog_device {
                 id = 0;
-                match_attr = "hisilicon_hi35xx_watchdog_0";
+                match_attr = "amlogic_a311d_watchdog_0";
             }
         }
     }

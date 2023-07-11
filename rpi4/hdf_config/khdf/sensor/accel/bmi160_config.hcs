@@ -1,24 +1,24 @@
 #include "../sensor_common.hcs"
 root {
-    proximity_apds9960_chip_config : sensorConfig {
-        match_attr = "hdf_sensor_proximity_adps9960_driver";
+    accel_bmi160_chip_config : sensorConfig {
+        match_attr = "hdf_sensor_accel_driver";
         sensorInfo :: sensorDeviceInfo {
-            sensorName = "proximity";
-            vendorName = "adps9960"; // max string length is 16 bytes
-            sensorTypeId = 12; // enum SensorTypeTag
-            sensorId = 12; // user define sensor id
+            sensorName = "accelerometer";
+            vendorName = "borsh_bmi160"; // max string length is 16 bytes
+            sensorTypeId = 1; // enum SensorTypeTag
+            sensorId = 1; // user define sensor id
             power = 230;
         }
         sensorBusConfig :: sensorBusInfo {
             busType = 0; // 0:i2c 1:spi
             busNum = 6;
-            busAddr = 0x39;
-            regWidth = 1; // 1byte
+            busAddr = 0x68;
+            regWidth = 1; // 1 byte
         }
         sensorIdAttr :: sensorIdInfo {
-            chipName = "adps9960";
-            chipIdRegister = 0x92;
-            chipIdValue = 0xAB;
+            chipName = "bmi160";
+            chipIdRegister = 0x00;
+            chipIdValue = 0xd1;
         }
         sensorRegConfig {
             /*  regAddr: register address
@@ -34,14 +34,16 @@ root {
             */
             /* regAddr, value, mask, len, delay, opsType, calType, shiftNum, debug, save */
             initSeqConfig = [
-                0x80,    0x05, 0xff,   1,     5,       2,       0,        0,     0,    0,
-                0x8f,    0x00, 0xff,   1,     5,       2,       0,        0,     0,    0
+                0x7e,    0xb6, 0xff,   1,     5,       2,       0,        0,     0,    0,
+                0x7e,    0x10, 0xff,   1,     5,       2,       0,        0,     0,    0
             ];
             enableSeqConfig = [
-                0x80,    0x05, 0xff,   1,     5,       2,       0,        0,     0,    0
+                0x7e,    0x11, 0xff,   1,     5,       2,       0,        0,     0,    0,
+                0x41,    0x03, 0xff,   1,     0,       2,       0,        0,     0,    0,
+                0x40,    0x08, 0xff,   1,     0,       2,       0,        0,     0,    0
             ];
             disableSeqConfig = [
-                0x80,    0x00, 0xff,   1,     5,       2,       0,        0,     0,    0
+                0x7e,    0x10, 0xff,   1,     5,       2,       0,        0,     0,    0
             ];
         }
     }
