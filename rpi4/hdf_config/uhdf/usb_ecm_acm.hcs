@@ -2,24 +2,24 @@ root {
     module = "usbfn";
     acm_device_config {
         match_attr = "usbfn_cdcacm_driver";
-        udc_name = "ff400000.usb";
+        udc_name = "fcc00000.dwc3";
     }
     ecm_device_config {
         match_attr = "usbfn_cdcecm_driver";
-        udc_name = "ff400000.usb";
+        udc_name = "fcc00000.dwc3";
     }
     mtp_device_config {
         match_attr = "usbfn_mtp_interface_driver";
-        udc_name = "ff400000.usb";
+        udc_name = "fcc00000.dwc3";
     }
     usb_device_config {
         match_attr = "usb_device_interface_driver";
-        port_file_path = "/sys/class/usb_role/ffe09000.usb-role-switch/role";
+        port_file_path = "/data/service/el1/public/usb/mode";
     }
     usbfn_config {
         match_attr = "usbfn_driver";
         use_hcs = 1;
-        udc_name = "ff400000.usb";
+        udc_name = "fcc00000.dwc3";
         usb_dev_desc = "UsbDeviceDescriptor";
         usb_dev_string = "UsbDeviceStrings";
         usb_configuration = "UsbConfigs";
@@ -69,7 +69,7 @@ root {
                 iConfiguration = 3;
                 attributes = 0xC0;
                 maxPower = 500;
-                functionList = ["func_ecm", "func_acm"];
+                functionList = ["func_ecm", "func_acm", "func_mtp", "func_ptp"];
                 func_ecm {
                     funcName = "f_generic.e";
                     stringTabList = ["fnString_1"];

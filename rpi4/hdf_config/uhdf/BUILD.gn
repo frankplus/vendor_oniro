@@ -16,13 +16,13 @@ import("//drivers/hdf_core/adapter/uhdf2/hcs/hcs.gni")
 hdf_hcb("hdf_default.hcb") {
   source = "./hdf.hcs"
   part_name = "product_rpi4"
-  subsystem_name = "napisubsys"
+  subsystem_name = "product_raspberrypi"
 }
 
 hdf_cfg("hdf_devhost.cfg") {
   source = "./hdf.hcs"
   part_name = "product_rpi4"
-  subsystem_name = "napisubsys"
+  subsystem_name = "product_raspberrypi"
 }
 
 group("hdf_config") {

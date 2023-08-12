@@ -6,10 +6,6 @@
             "gid": "root"
         },
         {
-            "name": "bootanimation",
-            "gid": "root"
-        },
-        {
             "name": "console",
             "uid": "root"
         },
@@ -53,6 +49,11 @@
         },
         {
             "name": "ueventd",
+            "uid": "system",
+            "gid": "system"
+        },
+        {
+            "name": "concurrent_task_service",
             "uid": "system",
             "gid": "system"
         },

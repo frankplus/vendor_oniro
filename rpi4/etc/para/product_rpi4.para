@@ -13,4 +13,6 @@
 
 const.product.brand=default
 const.build.product=default
-const.product.name="Raspberrypi 4"
+const.product.name="Raspberrypi 4B"
+const.product.model="Raspberrypi 4B"
+const.product.manufacturer=Raspberrypi
