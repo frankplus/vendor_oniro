@@ -1,11 +1,15 @@
 root {
     module="sample";
+    vdiLibList = [
+        "libcamera_host_vdi_impl_1.0.z.so"
+    ];
     camera_host_config {
         match_attr = "camera_host_interface";
         template ability {
             logicCameraId = "lcam001";
             physicsCameraIds = [
-                "CAMERA_FIRST"
+                "CAMERA_FIRST",
+                "CAMERA_SECOND"
             ];
             metadata {
                 aeAvailableAntiBandingModes = [
@@ -124,7 +128,8 @@ root {
         ability_01 :: ability {
             logicCameraId = "lcam001";
             physicsCameraIds = [
-                "CAMERA_FIRST"
+                "CAMERA_FIRST",
+                "CAMERA_SECOND"
             ];
             metadata {
                 aeAvailableAntiBandingModes = [
@@ -135,7 +140,7 @@ root {
                 cameraPosition = "OHOS_CAMERA_POSITION_FRONT";
                 cameraType = "OHOS_CAMERA_TYPE_WIDE_ANGLE";
                 cameraConnectionType ="OHOS_CAMERA_CONNECTION_TYPE_BUILTIN";
-                cameraMemoryType ="OHOS_CAMERA_MEMORY_MMAP";
+                cameraMemoryType ="OHOS_CAMERA_MEMORY_USERPTR";
                 faceDetectMaxNum = "10";
                 aeCompensationRange = [0, 0];
                 aeCompensationSteps = [0, 0];
@@ -201,6 +206,7 @@ root {
                 ];
                 mirrorSupported = "OHOS_CAMERA_MIRROR_OFF";
                 basicAvailableConfigurations = [1, 640, 480, 4, 1280, 960];
+                extendAvailableConfigurations = [0, 0, 1, 640, 480, 0, -1, 1, 1, 640, 480, 30, -1, 2, 4, 1280, 960, 0, -1, -1];
                 sensorOrientationSupported = "270";
                 videoStabilizationAvailableModes = [
                     "OHOS_CAMERA_VIDEO_STABILIZATION_OFF"
@@ -214,6 +220,7 @@ root {
                     "1.0"
                 ];
                 jpegOrientation= "270";
+                jpegQuality= "2";
             }
         }
     }

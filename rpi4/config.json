@@ -51,7 +51,8 @@
       "subsystem": "raspberrypi_products",
       "components": [
         {
-          "component": "raspberrypi_products"
+          "component": "raspberrypi_products",
+          "features": []
         }
       ]
     },
@@ -92,7 +93,7 @@
         {
           "component": "drivers_peripheral_audio",
           "features": [
-            "drivers_peripheral_audio_feature_full_test_suite = true",
+            "drivers_peripheral_audio_feature_full_test_suite = false",
             "drivers_peripheral_audio_feature_alsa_lib = false",
             "drivers_peripheral_audio_feature_effect = true"
           ]
@@ -100,8 +101,8 @@
         {
           "component": "drivers_peripheral_codec",
           "features": [
-            "drivers_peripheral_codec_feature_support_omx_extend_test = true",
-            "drivers_peripheral_codec_feature_support_hdi_v1 = true"
+            "drivers_peripheral_codec_feature_support_omx_extend_test = false",
+            "drivers_peripheral_codec_feature_support_hdi_v1 = false"
           ]
         },
         {
@@ -113,14 +114,14 @@
         {
           "component": "drivers_peripheral_wlan",
           "features": [
-            "drivers_peripheral_wlan_feature_enable_HDF_NL80211 = true",
+            "drivers_peripheral_wlan_feature_enable_HDF_NL80211 = false",
             "drivers_peripheral_wlan_feature_enable_HDF_UT = false"
           ]
         },
         {
           "component": "hdf_core",
           "features": [
-            "hdf_core_platform_test_support = true"
+            "hdf_core_platform_test_support = false"
           ]
         }
       ]
@@ -143,6 +144,28 @@
         {
           "component": "mindspore",
           "features": []
+        }
+      ]
+    },
+    {
+      "subsystem": "window",
+      "components": [
+        {
+          "component": "window_manager",
+          "features": [
+            "window_manager_dayu210_resource_config = false"
+         ]
+        }
+      ]
+    },
+    {
+      "subsystem": "multimedia",
+      "components": [
+        {
+          "component": "player_framework",
+          "features": [
+            "multimedia_player_framework_use_codec_plugins = false"
+         ]
         }
       ]
     },

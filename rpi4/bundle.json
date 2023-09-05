@@ -22,6 +22,7 @@
         "//vendor/iscas/rpi4/resourceschedule:resourceschedule",
         "//vendor/iscas/rpi4/etc:product_etc_conf",
         "//vendor/iscas/rpi4/hals/audio:hdf_audio_config",
+        "//vendor/iscas/rpi4/hals/codec/:hdf_codec_config",
         "//vendor/iscas/rpi4/hdf_config/uhdf:hdf_config",
         "//vendor/iscas/rpi4/custom_conf:custom_config"
       ]
