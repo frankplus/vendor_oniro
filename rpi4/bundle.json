@@ -1,5 +1,5 @@
 {
-  "name": "@ohos/iscas_rpi4",
+  "name": "@ohos/product_rpi4",
   "version": "3.1",
   "license": "Apache License 2.0",
   "private": false,
@@ -7,7 +7,7 @@
   "dirs": [""],
   "component": {
     "name": "product_rpi4",
-    "subsystem": "raspberrypi_products",
+    "subsystem": "product_rpi4",
     "syscap": [],
     "features": [],
     "deps": {
@@ -16,13 +16,8 @@
     },
     "build": {
       "sub_component": [
-        "//vendor/iscas/rpi4/default_app_config:default_app_config",
-        "//vendor/iscas/rpi4/image_conf:custom_image_conf",
         "//vendor/iscas/rpi4/preinstall-config:preinstall-config",
         "//vendor/iscas/rpi4/resourceschedule:resourceschedule",
-        "//vendor/iscas/rpi4/etc:product_etc_conf",
-        "//vendor/iscas/rpi4/hals/audio:hdf_audio_config",
-        "//vendor/iscas/rpi4/hals/codec/:hdf_codec_config",
         "//vendor/iscas/rpi4/hdf_config/uhdf:hdf_config",
         "//vendor/iscas/rpi4/custom_conf:custom_config"
       ]
