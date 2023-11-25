@@ -54,7 +54,7 @@
           "component": "ace_engine",
           "features": [
             "ace_engine_feature_enable_accessibility = true",
-            "ace_engine_feature_enable_web = true"
+            "ace_engine_feature_enable_web = false"
           ]
         }
       ]
@@ -109,9 +109,8 @@
         {
           "component": "graphic_2d",
           "features": [
-            "graphic_2d_feature_ace_enable_gpu = true",
-            "graphic_2d_feature_rs_enable_eglimage = true",
-            "graphic_2d_feature_rs_enable_uni_render = true"
+            "graphic_2d_feature_ace_enable_gpu = false",
+            "graphic_2d_feature_rs_enable_eglimage = false"
           ]
         }
       ]
