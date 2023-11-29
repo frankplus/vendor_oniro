@@ -12,5 +12,5 @@
 # limitations under the License.
 
 const.product.hardwareversion=default
-persist.hdc.mode=tcp
-persist.hdc.port=5555
+#persist.hdc.mode=tcp
+#persist.hdc.port=5555
